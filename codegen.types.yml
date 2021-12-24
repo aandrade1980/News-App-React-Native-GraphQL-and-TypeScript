@@ -1,0 +1,8 @@
+schema: ./src/graphql/graphql.schema.json
+overwrite: true
+documents: ./src/**/!(*.d).{ts,tsx}
+generates: 
+  ./src/graphql/__generate__/operationTypes.ts:
+    plugins:
+      - typescript
+      - typescript-operations
